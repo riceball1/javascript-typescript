@@ -1,0 +1,25 @@
+{
+  "name": "javascript-typescript",
+  "version": "1.0.0",
+  "description": "Learning all things javascript + typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riceball1/javascript-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riceball1/javascript-typescript/issues"
+  },
+  "homepage": "https://github.com/riceball1/javascript-typescript#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
