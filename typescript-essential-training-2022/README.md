@@ -17,3 +17,4 @@ https://www.linkedin.com/learning/typescript-essential-training-14687057
     - add configuration in tsconfig.json to output to es6 to `build` folder
     - use command `npm run build` which will run `tsc` command
     - in tsconfig.json you can use `esnext`  to use latest typescript, can use `noEmit: true` to avoid outputting anything
+    - Use https://github.com/DefinitelyTyped/DefinitelyTyped to find types defined by others
