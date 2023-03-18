@@ -9,12 +9,18 @@ const greenLight = document.getElementsByClassName('greenLight')
 /*
 The solution I ended up using recursion and setTimeout to activate the traffic light
 
-Some considerations different from the solution on GFE I didn't do was consider a11y adding aria-label and aria-live, as well as using javascript to inject the elements, instead I chose to hardcode the traffic light in html
+Some considerations:
+- a11y adding aria-label and aria-live
+- using javascript to inject the elements
+- using `beforeunload` to clear any running intervals -- though I think since my solution only had a setTimeout, I would want to clear that
 
 */
 const lights = [ { light: redLight[ 0 ], duration: 4000 },
 { light: yellowLight[ 0 ], duration: 500 },
 { light: greenLight[ 0 ], duration: 3000 } ]
+
+
+let timerId;
 
 function activateTrafficLight(count = 0) {
     const currentLight = lights[ count % lights.length ];
@@ -28,6 +34,19 @@ function activateTrafficLight(count = 0) {
 
 activateTrafficLight()
 
+/*
+
+Addition: add clearTimeout to avoid memory leak
+this will be done when 'beforeunload' -- a user is closing a window/tab 
+*/
+
+window.addEventListener('beforeunload', () => {
+    stopTrafficLight()
+})
+
+function stopTrafficLight() {
+    clearTimeout(timerId);
+  }
 
 function activate(light) {
     return light.classList.add('active')
