@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  
+  .trafficLight {
+    background-color: black;
+    height: 300px;
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px auto;
+  }
+  
+  .light {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    opacity: 10%;
+  }
+  
+  .active {
+    opacity: 100%;
+  }
+  
+  .redLight {
+    background-color: red;
+  }
+  .greenLight {
+    background-color: green;
+  }
+  .yellowLight {
+    background-color: yellow;
+  }
