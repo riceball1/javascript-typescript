@@ -12,6 +12,7 @@ The solution I ended up using recursion and setTimeout to activate the traffic l
 Some considerations:
 - a11y adding aria-label and aria-live
 - using javascript to inject the elements
+- reusability of components
 - using `beforeunload` to clear any running intervals -- though I think since my solution only had a setTimeout, I would want to clear that
 
 */
